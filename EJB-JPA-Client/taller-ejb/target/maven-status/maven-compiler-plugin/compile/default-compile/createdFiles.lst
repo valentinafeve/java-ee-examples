@@ -1,0 +1,4 @@
+com/beans/CatalogRemote.class
+com/beans/Catalog.class
+com/entities/Product.class
+com/beans/CatalogLocal.class

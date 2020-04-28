@@ -4,6 +4,20 @@
   <artifactId>taller-ejb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>ejb</packaging>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
+	<dependency>
+	    <groupId>javax.persistence</groupId>
+	    <artifactId>persistence-api</artifactId>
+	    <version>1.0</version>
+	    <scope>compile</scope>
+	</dependency>
+	<dependency>
+	    <groupId>javax</groupId>
+	    <artifactId>javaee-api</artifactId>
+	    <version>7.0</version>
+	</dependency>
+  </dependencies>
   <name>taller-ejb</name>
   <build>
     <sourceDirectory>ejbModule</sourceDirectory>

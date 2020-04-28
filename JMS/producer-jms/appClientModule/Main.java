@@ -1,5 +1,4 @@
 import java.util.Hashtable;
-import java.util.Properties;
 import javax.jms.JMSException;
 import javax.jms.Queue;
 import javax.jms.QueueConnection;
@@ -31,7 +30,7 @@ public class Main {
 			Hashtable env = new Hashtable();
 			env.put(Context.INITIAL_CONTEXT_FACTORY,  
 			    "com.sun.enterprise.naming.SerialInitContextFactory");
-
+			
 			ctx = new InitialContext(env);
 			
 			connectionFactory = (QueueConnectionFactory) ctx.lookup("jms/exampleConnectionFactory");

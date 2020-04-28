@@ -9,6 +9,7 @@ import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import com.entities.Product;
@@ -22,7 +23,7 @@ public class Catalog implements CatalogRemote, CatalogLocal {
 
 	private HashMap<Integer, List<Product>> cache = new HashMap<Integer, List<Product>>();
 	
-	@PersistenceContext(unitName = "taller-jpa", type = PersistenceContextType.EXTENDED)
+	@PersistenceContext(unitName = "test", type = PersistenceContextType.EXTENDED)
 	EntityManager em;
 	
 	/**
@@ -49,7 +50,7 @@ public class Catalog implements CatalogRemote, CatalogLocal {
     	
 		String query = "SELECT c FROM Product c WHERE c.id IS NOT NULL";
 		
-		TypedQuery<Product> tq = em.createQuery(query, Product.class).setFirstResult(limit_a).setMaxResults(limit_b);
+		Query tq = em.createNativeQuery(query,  Product.class).setFirstResult(limit_a).setMaxResults(limit_b);
 		List<Product> products = null;
 		int cont = limit_a;
 		try {

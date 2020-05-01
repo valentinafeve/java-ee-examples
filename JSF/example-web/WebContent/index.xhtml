@@ -11,11 +11,11 @@
 	<h:body>
 		
 		<h:form>
-		<h:commandButton value="Submit" action="#{controller.listProducts}" />
+		<h:commandButton value="Show products" action="#{controller.listProducts}" />
 		</h:form>
 		
 		<h:form>
-		<h:commandButton value="Submit" action="#{controller.listUsers}" />
+		<h:commandButton value="Show users" action="#{controller.listUsers}" />
 		</h:form>
 		
 		<h:form>
@@ -24,7 +24,7 @@
 			<br/><br/>
 			<h:inputText 
 									id="username"
-									value="#{controller.username}"
+									value="#{userBean.username}"
 									placeholder="username"/>	
 									
             <br/><br/>
@@ -32,12 +32,12 @@
 			Password
 			<br/><br/>
             <h:inputText 
-            							value="#{controller.password}"
+            							value="#{userBean.password}"
             							id="password"
-            							placeholder="username" />
+            							placeholder="password" />
 		
 			<br/><br/>
-		   <h:commandButton value="Submit" action="#{controller.validateUser}" />
+		   <h:commandButton value="Submit" action="#{userBean.validateUser}" />
 
 		</h:form>
 

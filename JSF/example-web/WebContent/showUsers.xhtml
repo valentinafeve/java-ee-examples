@@ -6,6 +6,19 @@
 
 <h:head></h:head> 
 <body> 
-Aquí van los usuarios
+<h:dataTable value="#{userBean.users}" var="u">  
+<h:column>  
+        <f:facet name="header">Username</f:facet>  
+        <h:outputText value="#{u.username}"/>  
+</h:column>  
+<h:column>  
+        <f:facet name="header">Name</f:facet>  
+		<h:outputText value="#{u.name}"/>  
+</h:column>
+<h:column>  
+        <f:facet name="header">Password</f:facet>  
+		<h:outputText value="#{u.password}"/>  
+</h:column>  
+</h:dataTable>  
 </body> 
 </html>

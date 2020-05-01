@@ -1,37 +1,25 @@
 package com.managedbeans;
 
 import java.util.List;
-
 import javax.faces.bean.ManagedBean;
 
-import com.entities.Product;
-import com.entities.User;
+import com.classes.Product;
 
 @ManagedBean
 public class Controller {
 
-	private String username;
-	private String password;
 	private List<Product> products;
-	private List<User> users;
 	
 	public Controller() {
+		products = Product.getProducts();
 	}
 	
-	public String getUsername() {
-		return this.username;
+	public List<Product> getProducts() {
+		return products;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setProducts(List<Product> products) {
+		this.products = products;
 	}
 
 	public String listProducts() {
@@ -42,11 +30,6 @@ public class Controller {
 	public String listUsers() {
 		System.out.println("list users");
 		return "showUsers";
-	}
-	
-	public String validateUser() {
-		System.out.println("validate users");
-		return "home";
 	}
 	
 }

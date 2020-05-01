@@ -5,8 +5,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
-import com.entities.Product;
-import com.entities.User;
+import com.classes.Product;
+import com.classes.User;
 
 @ManagedBean
 public class Delegated {

@@ -6,11 +6,6 @@
   <packaging>war</packaging>
   <name>example-web</name>
   <dependencies>
-  	<dependency>
-  		<groupId>example-ejb</groupId>
-	  <artifactId>example-ejb</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-  	</dependency>
 	<dependency>
 	    <groupId>com.sun.faces</groupId>
 	    <artifactId>jsf-impl</artifactId>
